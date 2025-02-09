@@ -76,8 +76,6 @@
             display: none;
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
-     crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Riddle Game</h1>
@@ -148,6 +146,8 @@
 
             if (currentValues.every((val, idx) => val === correctSolution[idx])) {
                 document.getElementById('fireworks').style.display = 'flex';
+            } else if (currentValues.every(val => !isNaN(val)) && currentValues.length === correctSolution.length) {
+                alert('गलत उत्तर! कृपया पुनः प्रयास करें।');
             }
         }
     </script>
